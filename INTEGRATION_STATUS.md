@@ -2,30 +2,10 @@
 
 This branch is intentionally isolated from `main`.
 
-The current GitHub repository snapshot contained only a 33-byte README, so there was no application source to modify safely. This branch therefore adds a standalone, production-oriented Coach module that is ready to be integrated once the current application source is synced here.
+The current GitHub repository snapshot contained only the original README, so there was no application source to modify safely. This branch adds a standalone, production-oriented Coach implementation rather than replacing or guessing at the unseen application.
 
-## Included
-
-- Qwen server-side integration
-- persistent SQLite conversations
-- explicit user memory
-- authenticated Coach UI
-- four Coach modes
-- health endpoint
-- rate limiting and input limits
-- security headers
-- unit tests with mocked Qwen
-- GitHub Actions CI
-- CT105 systemd unit
-
-## Safety
+Included: Qwen server integration, SQLite chat history, explicit memory, authenticated responsive UI, four Coach modes, health endpoint, rate/input limits, security headers, unit tests with mocked Qwen, GitHub Actions CI, and a CT105 systemd unit.
 
 `main` has not been modified. No existing application code was overwritten.
 
-## Required before production merge
-
-1. Sync the actual current application source into this repository.
-2. Integrate the Coach module into the existing navigation rather than replacing the application shell.
-3. Configure `QWEN_API_KEY`, `COACH_PASSWORD`, and `COACH_SESSION_SECRET` on CT105.
-4. Put the service behind HTTPS/reverse proxy.
-5. Run the full application test/build suite after integration.
+Before production merge, sync the actual current application source into this repository, integrate the Coach behind the existing navigation, configure secrets on CT105, put it behind HTTPS/reverse proxy, and run the full application build/test suite.
