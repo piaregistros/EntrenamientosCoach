@@ -2,7 +2,7 @@
 
 Rama de trabajo: `feature/qwen-coach`.
 
-Esta implementación es **aislada**: no toca `main`. El repositorio de origen actual contiene únicamente el README, por lo que el Coach se ha construido como un módulo autocontenido y desplegable sin dependencias Python externas. Cuando la aplicación principal se importe al repositorio, este módulo puede integrarse detrás de su navegación sin cambiar el contrato de la app existente.
+Esta implementación es **aislada**: no toca `main`. El repositorio de origen actual contenía únicamente el README, por lo que el Coach se ha construido como un módulo autocontenido y desplegable sin dependencias Python externas. Cuando la aplicación principal se importe al repositorio, este módulo puede integrarse detrás de su navegación sin cambiar el contrato de la app existente.
 
 ## Incluye
 
