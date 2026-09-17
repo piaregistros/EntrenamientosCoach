@@ -1,0 +1,8 @@
+.env
+*.env
+coach/data/*.sqlite3
+coach/data/*.sqlite3-shm
+coach/data/*.sqlite3-wal
+__pycache__/
+*.pyc
+.DS_Store

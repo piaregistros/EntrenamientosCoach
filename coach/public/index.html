@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="EntrenamientosCoach — entrenador personal con memoria y Qwen">
+<title>EntrenamientosCoach</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div id="login" class="screen"><div class="login-card"><div class="logo">EC</div><h1>EntrenamientosCoach</h1><p>Tu coach personal con memoria.</p><form id="login-form"><input id="password" type="password" autocomplete="current-password" placeholder="Contraseña" required><button>Entrar</button><div id="login-error" class="error"></div></form></div></div>
+<div id="app" class="app hidden">
+<aside class="sidebar"><div class="brand"><span class="logo small">EC</span><div><strong>Entrenamientos</strong><small>COACH</small></div></div><button id="new-chat" class="primary full">＋ Nueva conversación</button><div id="conversation-list" class="conversation-list"></div><div class="sidebar-bottom"><button id="memory-toggle" class="ghost full">🧠 Memoria</button><button id="logout" class="ghost full">Salir</button></div></aside>
+<main class="main"><header><div><h2 id="chat-title">Coach</h2><span id="status" class="status">Comprobando…</span></div><select id="mode"><option value="coach">Coach general</option><option value="plan">Plan de entrenamiento</option><option value="nutrition">Nutrición y hábitos</option><option value="recovery">Recuperación</option></select></header>
+<section id="messages" class="messages"><div class="welcome"><div class="hero-icon">⚡</div><h1>¿Qué quieres conseguir hoy?</h1><p>Entrena con un plan, revisa tu progreso o pregunta lo que necesites.</p><div class="suggestions"><button data-prompt="Diseña mi entrenamiento de hoy según mi objetivo y el tiempo que tengo.">🏋️ Entrenamiento</button><button data-prompt="Ayúdame a organizar esta semana de entrenamiento y recuperación.">📅 Semana</button><button data-prompt="Quiero mejorar mis hábitos de recuperación y sueño.">😴 Recuperación</button></div></div></section>
+<form id="chat-form" class="composer"><textarea id="message" rows="1" maxlength="12000" placeholder="Escribe a tu coach…" required></textarea><button id="send" aria-label="Enviar">➤</button></form>
+</main>
+<aside id="memory-panel" class="memory-panel hidden"><div class="panel-head"><h3>Memoria</h3><button id="memory-close">×</button></div><p class="muted">Guarda datos que quieras que el coach recuerde entre conversaciones.</p><form id="memory-form"><input id="memory-input" maxlength="1000" placeholder="Ej.: Mi objetivo es correr 10 km…"><button class="primary">Guardar</button></form><div id="memory-list"></div></aside>
+</div><script src="/app.js"></script></body></html>
